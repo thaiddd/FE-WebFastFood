@@ -1,0 +1,59 @@
+<div class="account section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="login-form border p-5">
+          <div class="text-center heading">
+            <h2 class="mb-2">Đăng ký</h2>
+            <p class="lead">Đã có tài khoản? <a routerLink="/login"> Đăng nhập</a></p>
+          </div>
+
+          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+            <div class="form-group mb-4">
+              <label>Họ tên</label>
+              <input
+                class="form-control"
+                type="text"
+                formControlName="fullname"
+                placeholder=""
+              >
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Email</label>
+              <input
+                class="form-control"
+                type="email"
+                formControlName="email"
+                placeholder=""
+              >
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Tên đăng nhập</label>
+              <a class="float-right" href="">Quên mật khẩu ?</a>
+              <input
+                type="text"
+                class="form-control"
+                placeholder=""
+                formControlName="username"
+              >
+            </div>
+
+            <div class="form-group mb-4">
+              <label>Mật khẩu </label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder=""
+                formControlName="password"
+              >
+            </div>
+            <button class="btn btn-main mt-3 btn-block" type="submit">Đăng ký</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
